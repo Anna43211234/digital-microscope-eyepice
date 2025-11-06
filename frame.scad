@@ -1,0 +1,41 @@
+use <smartphone.scad>
+
+frame1 ();
+translate([0, 25, 0])
+corner();
+
+
+module frame1 (){
+    difference(){
+        color ("green")
+        translate([162/2-162/4+10, 10, 0])
+        cube([162/2, 77+10, 10], center=true);
+        scale([1, 1, 2])
+        block();
+    }
+}
+
+module corner(){
+    translate([162/2+20, 0, 0])
+    frame2();
+    
+    translate([162/2-13.5, 77/2, 0])
+    rotate([0, 0, 90])
+    frame2();
+}
+module frame2(){
+    hull(){
+        translate([5, 77/2, 0])
+        cylinder(d=5, h=10, center=true, $fn=32);
+        mirror([1, 0, 0])
+        translate([5, 77/2, 0])
+        cylinder(d=5, h=10, center=true, $fn=32);
+        mirror([0, 1, 0])
+        translate([5, 77/2, 0])
+        cylinder(d=5, h=10, center=true, $fn=32);
+        mirror([1, 0, 0])
+        mirror([0, 1, 0])
+        translate([5, 77/2, 0])
+        cylinder(d=5, h=10, center=true, $fn=32);
+    }
+}
