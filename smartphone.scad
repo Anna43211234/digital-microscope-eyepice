@@ -4,6 +4,25 @@ r_round_corner = 15;
 smartphone();
 
 module smartphone(){
+    block();
+    cameras();
+}
+
+module cameras(){
+    color("blue")
+    translate([162/2-13, 77/2-13, 0])
+    cylinder(d=14, h=15, center=true);
+    
+    color("blue")
+    translate([162/2-30, 77/2-13, 0])
+    cylinder(d=14, h=15, center=true);
+    
+    color("blue")
+    translate([162/2-47, 77/2-13, 0])
+    cylinder(d=14, h=15, center=true);
+}
+
+module block(){
     hull(){
         cube ([162-r_round_corner/2, 77-r_round_corner/2, 9], center=true);
         
