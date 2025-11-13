@@ -11,13 +11,33 @@ phone_width = 77;
 //translate([0, 25, 3])
 //color ("red")
 //corner(thickness=20);
+crossbar_vertical(length=phone_height+40);
 
-difference (){
-    color ("red")
-    corner(thickness=20);
-    holes_corner();
-    
+module crossbar_vertical(length){
+    difference(){
+        hull(){
+            translate([-(length)/2, 0, 0])
+            cylinder(d=7, h=3, center=true, $fn=32);
+            
+            translate([(length)/2, 0, 0])
+            cylinder(d=7, h=3, center=true, $fn=32);
+        }
+        
+        hull(){
+            translate([-(length)/2+2, 0, 0])
+            cylinder(d=3.5, h=10, center=true, $fn=32);
+            
+            translate([(length)/2-2, 0, 0])
+            cylinder(d=3.5, h=10, center=true, $fn=32);
+        }
+    }
 }
+//difference (){
+//    color ("red")
+//    corner(thickness=20);
+//    holes_corner();
+//    
+//}
 
 
 
