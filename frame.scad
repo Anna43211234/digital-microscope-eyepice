@@ -11,8 +11,16 @@ phone_width = 77;
 //translate([0, 25, 3])
 //color ("red")
 //corner(thickness=20);
-crossbar_vertical(length=phone_height+40);
+frame_crossbar();
 
+module frame_crossbar(){
+    crossbar_vertical(length=162+50);
+    crossbar_horizontal(length=77+50);
+}
+module crossbar_horizontal (length){
+    rotate([0, 0, 90])
+    crossbar_vertical(length);
+    }
 module crossbar_vertical(length){
     difference(){
         hull(){
