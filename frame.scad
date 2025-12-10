@@ -11,7 +11,22 @@ phone_width = 77;
 //translate([0, 25, 3])
 //color ("red")
 //corner(thickness=20);
-frame_crossbar();
+difference(){
+    block_jaw();
+    translate([0, 25, 0])
+    cube([40+25*2, 25*2, 9*3+1], center=true);
+}
+module block_jaw(){
+    linear_extrude(height=9*3, center=true){
+        hull(){
+            translate([15, 0, 0])
+            circle(25);
+            translate([-15, 0, 0])
+            circle(25);
+        }
+    }
+}
+//frame_crossbar();
 
 module frame_crossbar(){
     crossbar_vertical(length=162+50);
