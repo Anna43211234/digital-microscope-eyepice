@@ -1,5 +1,5 @@
 # Работа Корепановой Анны
-# Проект "Цифровой окуляр микроскопа на языке OpenScad"
+# Проект «Цифровой окуляр микроскопа на языке OpenScad»
 
 ![Model in OpenScad plate for twin lasers](images/frame_with_smartphone.png)
 
