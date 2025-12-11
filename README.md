@@ -8,3 +8,14 @@
 Исходная модель захвата:
 [Модель в формате STL и UPP](https://www.thingiverse.com/thing:431168) в репозитории на GitHub
 Universal Phone Microscope Adapter
+
+# Окуляр
+![Model in OpenScad plate for ocular](images/ocular.png)
+
+# Боковой держатель
+![Model in OpenScad plate for half jaws](images/half_jaws.png)
+
+# Смартфон Samsung A55
+![Model in OpenScad plate for smartphone](images/smartphone.png)
+
+# Фотография напечатанной модели
